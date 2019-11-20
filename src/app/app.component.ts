@@ -16,8 +16,10 @@ export class AppComponent {
 
 
   form = this.fb.group({
-    customernumber: ['C-123456', { validators: [this.customernumberValidator.validate], updateOn: 'blur' }],
-    customernumber2: ['C-123456', { validators: [this.customernumberValidator.validate] }]
+    customernumber1: ['C-123456', { validators: [this.customernumberValidator.validate], updateOn: 'blur' }],
+    customernumber2: ['C-123456', { validators: [this.customernumberValidator.validate], updateOn: 'blur' }],
+    customernumber3: ['C-123456', { validators: [this.customernumberValidator.validate] }],
+    customernumber4: ['C-123456', { validators: [this.customernumberValidator.validate], updateOn: 'blur' }],
 
   });
 

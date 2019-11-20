@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ValidationErrorMarkerComponent } from './validation-error-marker/validation-error-marker.component';
 import { CustomernumberFormatterDirective } from './customernumber-formatter.directive';
 import { CustomernumberFormatterAccessorDirective } from './customernumber-formatter-accessor.directive';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ValidationErrorMarkerComponent,
     CustomernumberFormatterDirective,
-    CustomernumberFormatterAccessorDirective
+    CustomernumberFormatterAccessorDirective,
+    InputComponent
   ],
   imports: [
     BrowserModule,

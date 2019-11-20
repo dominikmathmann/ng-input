@@ -7,16 +7,12 @@ import { log } from 'util';
 })
 export class CustomernumberFormatterDirective {
 
-  constructor(private el: ElementRef, private renderer: Renderer2, private control: NgControl) {
-
-  }
+  constructor(private el: ElementRef, private renderer: Renderer2, private control: NgControl) { }
 
   @HostListener('blur', ['$event.target.value'])
   onBlur(val: string) {
-
     if (this.control.valid && val && !/^C-.*/.test(val)) {
       this.renderer.setProperty(this.el.nativeElement, 'value', 'C-' + val);
     }
-
   }
 }

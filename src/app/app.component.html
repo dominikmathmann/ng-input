@@ -1,17 +1,21 @@
 <h1>ng-input</h1>
 <form [formGroup]="form" (ngSubmit)="submit()">
   <article>
-    <h2>
-      here we go
-    </h2>
-    <!-- <input type="text" formControlName="customernumber" (blur)="formatNumber('customernumber')" /> -->
-    <input type="text" formControlName="customernumber" gedCustomernumberFormatter />
-    <ged-validation-error-marker [control]="form.controls['customernumber']"></ged-validation-error-marker>
-    <input type="text" formControlName="customernumber2" gedCustomernumberFormatterAccessor />
+    <h2>Event</h2>
+    <input type="text" formControlName="customernumber1" (blur)="formatNumber('customernumber1')" />
+    <ged-validation-error-marker [control]="form.controls['customernumber1']"></ged-validation-error-marker>
+    <h2>Directive</h2>
+    <input type="text" formControlName="customernumber2" gedCustomernumberFormatter />
     <ged-validation-error-marker [control]="form.controls['customernumber2']"></ged-validation-error-marker>
+    <h2>ControlValueAccessor</h2>
+    <input type="text" formControlName="customernumber3" gedCustomernumberFormatterAccessor />
+    <ged-validation-error-marker [control]="form.controls['customernumber3']"></ged-validation-error-marker>
+    <h2>bundled in custom Input</h2>
+    <ged-input>
+      <input type="text" formControlName="customernumber4" gedCustomernumberFormatter />
+    </ged-input>
 
     <button type="submit">submit</button>
   </article>
 
-  {{form.value | json }}
 </form>
