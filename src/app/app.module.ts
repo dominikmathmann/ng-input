@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ValidationErrorMarkerComponent } from './validation-error-marker/validation-error-marker.component';
+import { CustomernumberFormatterDirective } from './customernumber-formatter.directive';
+import { CustomernumberFormatterAccessorDirective } from './customernumber-formatter-accessor.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValidationErrorMarkerComponent,
+    CustomernumberFormatterDirective,
+    CustomernumberFormatterAccessorDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
