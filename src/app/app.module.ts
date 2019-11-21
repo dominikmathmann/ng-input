@@ -7,6 +7,7 @@ import { ValidationErrorMarkerComponent } from './validation-error-marker/valida
 import { CustomernumberFormatterDirective } from './customernumber-formatter.directive';
 import { CustomernumberFormatterAccessorDirective } from './customernumber-formatter-accessor.directive';
 import { InputComponent } from './input/input.component';
+import { CustomernumberInputComponent } from './customernumber-input/customernumber-input.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InputComponent } from './input/input.component';
     ValidationErrorMarkerComponent,
     CustomernumberFormatterDirective,
     CustomernumberFormatterAccessorDirective,
-    InputComponent
+    InputComponent,
+    CustomernumberInputComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,5 @@
+<div class="input">
+  <input type="text" #input [value]="value" [disabled]="disabled" (blur)="onBlur()" (focus)="onFocus()"
+    [class.ng-touched]="touched" [class.ng-invalid]="invalid" />
+  <ged-validation-error-marker [control]="control"></ged-validation-error-marker>
+</div>

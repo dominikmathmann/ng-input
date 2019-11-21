@@ -18,6 +18,10 @@ export class CustomernumberFormatterAccessorDirective implements ControlValueAcc
   updateValue: any;
   touched: any;
 
+  /**
+   * Model > View, wir entfernen das C- Präfix sodass es nicht mit angezeigt wird.
+   * @param obj
+   */
   writeValue(obj: any): void {
     obj = obj.replace('C-', '');
     this.renderer.setProperty(this.el.nativeElement, 'value', obj);
@@ -27,6 +31,11 @@ export class CustomernumberFormatterAccessorDirective implements ControlValueAcc
     this.updateValue = fn;
   }
 
+  /**
+   * Update-Trigger, optional setzen wie das C- Präfix wieder davor, damit sieht der User es nicht, ist aber im Model.
+   *
+   * @param event
+   */
   @HostListener('blur', ['$event'])
   onInput(event: any) {
     this.touched();
