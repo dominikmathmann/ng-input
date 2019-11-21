@@ -43,6 +43,8 @@ export class CustomernumberFormatterAccessorDirective implements ControlValueAcc
 
     if (!/^C-/.test(val)) {
       val = 'C-' + val;
+    } else {
+      this.renderer.setProperty(this.el.nativeElement, 'value', val.replace('C-', ''));
     }
 
     this.updateValue(val);
