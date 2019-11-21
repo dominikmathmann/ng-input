@@ -6,16 +6,10 @@ import { FormControl } from '@angular/forms';
   templateUrl: './validation-error-marker.component.html',
   styleUrls: ['./validation-error-marker.component.scss']
 })
-export class ValidationErrorMarkerComponent implements OnChanges {
+export class ValidationErrorMarkerComponent {
 
   @Input()
   control: FormControl;
-
-  constructor() { }
-
-  ngOnChanges() {
-
-  }
 
   get visible() {
     return this.control && !this.control.valid;
@@ -25,6 +19,4 @@ export class ValidationErrorMarkerComponent implements OnChanges {
     const errors = this.control.errors;
     return Object.keys(errors).map(errorKey => `${errorKey} : ${errors[errorKey]}`).join(', ');
   }
-
-
 }

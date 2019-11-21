@@ -6,15 +6,7 @@ import { NgControl } from '@angular/forms';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements AfterViewInit {
-
+export class InputComponent {
   @ContentChild(NgControl, { static: false })
   control: NgControl;
-
-  constructor() { }
-
-  ngAfterViewInit() {
-
-  }
-
 }

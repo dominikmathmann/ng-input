@@ -10,9 +10,7 @@ import { CustomernumberValidatorService } from './customernumber-validator.servi
 })
 export class AppComponent {
 
-  constructor(private fb: FormBuilder, private customernumberValidator: CustomernumberValidatorService) {
-
-  }
+  constructor(private fb: FormBuilder, private customernumberValidator: CustomernumberValidatorService) { }
 
   templateModelValue = 'C-123456';
 
@@ -28,15 +26,6 @@ export class AppComponent {
     console.log(this.form.value);
   }
 
-  /**
-   *
-   * Simple Variante einer Konvertierung.
-   *
-   * Nachteil: diese Umwandlung ist nicht wiederverwendbar.
-   *
-   * @param formControlName Name des FormControls
-   *
-   */
   formatNumber(formControlName) {
     const control = this.form.controls[formControlName];
     if (control.value && control.valid && !/^C-.*?/.test(control.value)) {
