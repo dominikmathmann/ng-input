@@ -1,4 +1,12 @@
 <h1>ng-input</h1>
+
+<article>
+  <h2>TemplateDriven</h2>
+  <input type="text" [(ngModel)]="templateModelValue" #templateModel="ngModel" gedCustomernumberValidator
+    [ngModelOptions]="{ updateOn: 'blur' }" />
+  <ged-validation-error-marker [control]="templateModel.control"></ged-validation-error-marker>
+</article>
+
 <form [formGroup]="form" (ngSubmit)="submit()">
   <article>
     <h2>Event</h2>
@@ -19,5 +27,4 @@
 
     <button type="submit">submit</button>
   </article>
-
 </form>

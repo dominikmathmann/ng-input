@@ -14,6 +14,7 @@ export class AppComponent {
 
   }
 
+  templateModelValue = 'C-123456';
 
   form = this.fb.group({
     customernumber1: ['C-123456', { validators: [this.customernumberValidator.validate], updateOn: 'blur' }],
