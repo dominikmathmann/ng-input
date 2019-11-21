@@ -16,8 +16,5 @@ export class CustomernumberValidatorService {
         pattern: 'Ungültiges Format'
       };
     }
-
-    return {};
-
   }
 }
