@@ -17,6 +17,7 @@
     <ged-validation-error-marker [control]="form.controls['customernumber2']"></ged-validation-error-marker>
     <h2>ControlValueAccessor</h2>
     <input type="text" formControlName="customernumber3" gedCustomernumberFormatterAccessor />
+    <div>FormControl Value : {{form.controls["customernumber3"].value}}</div>
     <ged-validation-error-marker [control]="form.controls['customernumber3']"></ged-validation-error-marker>
     <h2>bundled in custom Input</h2>
     <ged-input>
